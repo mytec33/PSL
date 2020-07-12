@@ -7,8 +7,23 @@ namespace PSL
     {
         static void Main(string[] args)
         {
+            List<Token> tokens = new List<Token>();
+
+            if (args.Length != 1)
+            {
+                PrintHelp();
+                Environment.Exit(1);
+            }
+
+            tokens = TokenizeFile(args[0]);
+
+            PrintTokens(tokens);
+        }
+
+        static private List<Token> TokenizeFile(string file)
+        {
             List<Token> Tokens = new List<Token>();
-            PSL_Reader reader = new PSL_Reader(@"C:\btn_bDisc31.uds");
+            PSL_Reader reader = new PSL_Reader(file);
             string operators = "+/*<>,=[]{}()";
             string numbers = "1234567890";
 
@@ -129,9 +144,19 @@ namespace PSL
                 }
             }
 
-            foreach (Token token in Tokens)
+            return Tokens;
+        }
+
+        static private void PrintHelp()
+        {
+            Console.WriteLine("You must provide a path and file name");
+        }
+
+        static private void PrintTokens(List<Token> tokens)
+        {
+            foreach (Token token in tokens)
             {
-                Console.WriteLine($"{token.Type}\t*{token.Literal}*");
+                Console.WriteLine(token.DebugPrint());
             }
         }
     }
