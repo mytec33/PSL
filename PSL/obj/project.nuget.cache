@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "L3iFQbHzMeFBhHX3vxJ7azM7+qEMgOFGDYbp+7pfyQn1ordqjJahnjeDDJwvKCPdXLi8YHnZ0LdUrx1LEJYkAg==",
+  "success": true,
+  "projectFilePath": "/Users/bill/Documents/src/csharp/PSL/PSL/PSL.csproj",
+  "expectedPackageFiles": [
+    "/Users/bill/.nuget/packages/microsoft.aspnetcore.app.ref/3.0.1/microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "/Users/bill/.nuget/packages/microsoft.netcore.app.ref/3.0.0/microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
