@@ -37,5 +37,15 @@
             }
             return "IDENT";
         }
+
+        public string DebugPrint()
+        {
+            string tabs = "\t";
+
+            if (Type.Length < 6)
+                tabs = "\t\t";
+
+            return $"*{Type}*{tabs}*{Literal}*";
+        }
     }
 }
